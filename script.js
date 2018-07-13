@@ -3,6 +3,8 @@ let aiScore = 0;
 document.getElementById('userScore').innerHTML = userScore;
 document.getElementById('aiScore').innerHTML = aiScore;
 //the round function is using an arrow function () => I am not entirely sure what it does I should research
+
+// use a modal box to pop-up when the player reaches 5 points then the button on the modal box will reset the scores to 0
 function round() {
   rockButton.addEventListener('click', () => getRoundResult('rock'));
   paperButton.addEventListener('click', () => getRoundResult('paper'));
@@ -47,10 +49,15 @@ function getAiPick() {
 }
 
 function userLoseRound(userPick, aiPick) {
-  aiScore++;
   document.getElementById('test').innerHTML = aiPick + ' beats ' + userPick+ ', you lose!';
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
+  if (aiScore <  4) {
+    aiScore ++;
+  } else {
+    aiScore++;
+    document.getElementById('end').innerHTML = 'game over';
+  }
 }
 
 function userWinRound(userPick, aiPick) {
@@ -58,6 +65,12 @@ function userWinRound(userPick, aiPick) {
   document.getElementById('test').innerHTML = userPick + ' beats ' + aiPick+ ', you win!';
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
+  if (userScore < 4) {
+    userScore++;
+  } else {
+    userScore++;
+    document.getElementById('end').innerHTML = 'game over';
+  }
 }
 
 function drawRound(userPick, aiPick) {
@@ -65,5 +78,6 @@ function drawRound(userPick, aiPick) {
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
 }
+
 
 round();
