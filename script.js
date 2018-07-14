@@ -11,6 +11,24 @@ function round() {
   scissorsButton.addEventListener('click', () => getRoundResult('scissors'));
 }
 
+round();
+
+function getAiPick() {
+  let aiPick= Math.floor(Math.random() * 3) + 1;
+    switch (aiPick) {
+      case 1:
+        return 'rock';
+        break;
+      case 2:
+        return 'paper';
+        break;
+      case 3:
+        return 'scissors';
+        break;
+    }
+
+}
+
 function getRoundResult(userPick) {
   let aiPick = getAiPick();
     switch (userPick + aiPick) {
@@ -32,44 +50,35 @@ function getRoundResult(userPick) {
     }
 }
 
-function getAiPick() {
-  let aiPick= Math.floor(Math.random() * 3) + 1;
-    switch (aiPick) {
-      case 1:
-        return 'rock';
-        break;
-      case 2:
-        return 'paper';
-        break;
-      case 3:
-        return 'scissors';
-        break;
-    }
-
-}
+getRoundResult();
 
 function userLoseRound(userPick, aiPick) {
+  if (aiScore <  4) {
+    aiScore++;
+  } else if (aiScore = 4) {
+    aiScore++;
+    document.getElementById('end').innerHTML = 'game over';
+  } else {
+    document.getElementById('end').innerHTML='ERROR';
+  }
   document.getElementById('test').innerHTML = aiPick + ' beats ' + userPick+ ', you lose!';
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
-  if (aiScore <  4) {
-    aiScore ++;
-  } else {
-    aiScore++;
-    document.getElementById('end').innerHTML = 'game over';
-  }
 }
 
+
 function userWinRound(userPick, aiPick) {
+  if (userScore < 4) {
+    userScore++;
+  } else if (userScore = 4) {
+    userScore++;
+    document.getElementById('end').innerHTML = 'game over';
+  } else {
+    document.getElementById('end').innerHTML = 'ERROR';
+  }
   document.getElementById('test').innerHTML = userPick + ' beats ' + aiPick+ ', you win!';
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
-  if (userScore < 4) {
-    userScore++;
-  } else {
-    userScore++;
-    document.getElementById('end').innerHTML = 'game over';
-  }
 }
 
 function drawRound(userPick, aiPick) {
@@ -77,6 +86,3 @@ function drawRound(userPick, aiPick) {
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
 }
-
-
-round();
