@@ -61,7 +61,6 @@ function userLoseRound(userPick, aiPick) {
 }
 
 function userWinRound(userPick, aiPick) {
-  userScore++;
   document.getElementById('test').innerHTML = userPick + ' beats ' + aiPick+ ', you win!';
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
