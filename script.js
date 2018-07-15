@@ -14,6 +14,7 @@ function round() {
   rockButton.addEventListener('click', () => getRoundResult('rock'));
   paperButton.addEventListener('click', () => getRoundResult('paper'));
   scissorsButton.addEventListener('click', () => getRoundResult('scissors'));
+  document.getElementById('close').addEventListener('click', () => resetClose(aiScore, userScore));
 }
 
 round();
@@ -98,8 +99,12 @@ function openModal() {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+
+function resetClose() {
+  aiScore = 0;
+  userScore = 0;
+  modal.style.display = 'none';
+
 }
 
 // When the user clicks anywhere outside of the modal, close it
