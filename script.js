@@ -103,13 +103,18 @@ function openModal() {
 function resetClose() {
   aiScore = 0;
   userScore = 0;
+  document.getElementById('userScore').innerHTML = userScore;
+  document.getElementById('aiScore').innerHTML = aiScore;
   modal.style.display = 'none';
-
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
+      aiScore = 0;
+      userScore = 0;
+      document.getElementById('userScore').innerHTML = userScore;
+      document.getElementById('aiScore').innerHTML = aiScore;
       modal.style.display = "none";
   }
 }
