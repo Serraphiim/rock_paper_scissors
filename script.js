@@ -2,11 +2,14 @@ let userScore = 0;
 let aiScore = 0;
 let span = document.getElementsByClassName("close")[0];
 let modal = document.getElementById('myModal');
+let result = 'Select a button to begin.';
 document.getElementById('userScore').innerHTML = userScore;
 document.getElementById('aiScore').innerHTML = aiScore;
+document.getElementById('result').innerHTML = result;
 //the round function is using an arrow function () => I am not entirely sure what it does I should research
 
 // use a modal box to pop-up when the player reaches 5 points then the button on the modal box will reset the scores to 0
+// add an event to reset the score when the span button is selected
 function round() {
   rockButton.addEventListener('click', () => getRoundResult('rock'));
   paperButton.addEventListener('click', () => getRoundResult('paper'));
@@ -52,8 +55,6 @@ function getRoundResult(userPick) {
     }
 }
 
-getRoundResult();
-
 function userLoseRound(userPick, aiPick) {
   if (aiScore <  4) {
     aiScore++;
@@ -61,9 +62,10 @@ function userLoseRound(userPick, aiPick) {
     aiScore++;
     openModal();
   } else {
-    document.getElementById('end').innerHTML='ERROR';
+    aiScore = 'ERROR';
   }
-  document.getElementById('test').innerHTML = aiPick + ' beats ' + userPick+ ', you lose!';
+  result = aiPick + ' beats ' + userPick+ ', you lose!';
+  document.getElementById('result').innerHTML = result;
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
 }
@@ -76,15 +78,17 @@ function userWinRound(userPick, aiPick) {
     userScore++;
     openModal();
   } else {
-    document.getElementById('end').innerHTML = 'ERROR';
+    userScore = 'ERROR';
   }
-  document.getElementById('test').innerHTML = userPick + ' beats ' + aiPick+ ', you win!';
+  result = userPick + ' beats ' + aiPick+ ', you win!';
+  document.getElementById('result').innerHTML  = result;
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
 }
 
 function drawRound(userPick, aiPick) {
-  document.getElementById('test').innerHTML = ' Both players chose ' + userPick+ ', it is a draw!';
+  result = ' Both players chose ' + userPick+ ', it is a draw!';
+  document.getElementById('result').innerHTML = result;
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
 }
