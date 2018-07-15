@@ -1,5 +1,7 @@
 let userScore = 0;
 let aiScore = 0;
+let span = document.getElementsByClassName("close")[0];
+let modal = document.getElementById('myModal');
 document.getElementById('userScore').innerHTML = userScore;
 document.getElementById('aiScore').innerHTML = aiScore;
 //the round function is using an arrow function () => I am not entirely sure what it does I should research
@@ -57,7 +59,7 @@ function userLoseRound(userPick, aiPick) {
     aiScore++;
   } else if (aiScore = 4) {
     aiScore++;
-    document.getElementById('end').innerHTML = 'game over';
+    openModal();
   } else {
     document.getElementById('end').innerHTML='ERROR';
   }
@@ -72,7 +74,7 @@ function userWinRound(userPick, aiPick) {
     userScore++;
   } else if (userScore = 4) {
     userScore++;
-    document.getElementById('end').innerHTML = 'game over';
+    openModal();
   } else {
     document.getElementById('end').innerHTML = 'ERROR';
   }
@@ -85,4 +87,20 @@ function drawRound(userPick, aiPick) {
   document.getElementById('test').innerHTML = ' Both players chose ' + userPick+ ', it is a draw!';
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
+}
+
+function openModal() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
