@@ -1,6 +1,6 @@
 let userScore = 0;
 let aiScore = 0;
-let span = document.getElementsByClassName("close")[0];
+let span = document.getElementById('closeButton')[0];
 let modal = document.getElementById('myModal');
 let result = 'Select a button to begin.';
 document.getElementById('userScore').innerHTML = userScore;
@@ -14,7 +14,7 @@ function round() {
   rockButton.addEventListener('click', () => getRoundResult('rock'));
   paperButton.addEventListener('click', () => getRoundResult('paper'));
   scissorsButton.addEventListener('click', () => getRoundResult('scissors'));
-  document.getElementById('close').addEventListener('click', () => resetClose(aiScore, userScore));
+  document.getElementById('closeButton').addEventListener('click', () => resetClose(aiScore, userScore));
 }
 
 round();
@@ -69,6 +69,7 @@ function userLoseRound(userPick, aiPick) {
   document.getElementById('result').innerHTML = result;
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
+  document.getElementById('finalRoundResult').innerHTML = result;
 }
 
 
@@ -85,6 +86,7 @@ function userWinRound(userPick, aiPick) {
   document.getElementById('result').innerHTML  = result;
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
+  document.getElementById('finalRoundResult').innerHTML = result;
 }
 
 function drawRound(userPick, aiPick) {
@@ -95,7 +97,7 @@ function drawRound(userPick, aiPick) {
 }
 
 function openModal() {
-  modal.style.display = "block";
+  modal.style.display = 'block';
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -115,6 +117,6 @@ window.onclick = function(event) {
       userScore = 0;
       document.getElementById('userScore').innerHTML = userScore;
       document.getElementById('aiScore').innerHTML = aiScore;
-      modal.style.display = "none";
+      modal.style.display = 'none';
   }
 }
