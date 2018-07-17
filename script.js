@@ -11,9 +11,9 @@ document.getElementById('result').innerHTML = result;
 // use a modal box to pop-up when the player reaches 5 points then the button on the modal box will reset the scores to 0
 // add an event to reset the score when the span button is selected
 function round() {
-  rockButton.addEventListener('click', () => getRoundResult('rock'));
-  paperButton.addEventListener('click', () => getRoundResult('paper'));
-  scissorsButton.addEventListener('click', () => getRoundResult('scissors'));
+  rockButton.addEventListener('click', () => getRoundResult('Rock'));
+  paperButton.addEventListener('click', () => getRoundResult('Paper'));
+  scissorsButton.addEventListener('click', () => getRoundResult('Scissors'));
   document.getElementById('closeButton').addEventListener('click', () => resetClose(aiScore, userScore));
 }
 
@@ -23,13 +23,13 @@ function getAiPick() {
   let aiPick= Math.floor(Math.random() * 3) + 1;
     switch (aiPick) {
       case 1:
-        return 'rock';
+        return 'Rock';
         break;
       case 2:
-        return 'paper';
+        return 'Paper';
         break;
       case 3:
-        return 'scissors';
+        return 'Scissors';
         break;
     }
 
@@ -38,19 +38,19 @@ function getAiPick() {
 function getRoundResult(userPick) {
   let aiPick = getAiPick();
     switch (userPick + aiPick) {
-      case 'rockpaper':
-      case 'paperscissors':
-      case 'scissorsrock':
+      case 'RockPaper':
+      case 'PaperScissors':
+      case 'ScissorsRock':
         userLoseRound(userPick, aiPick);
         break;
-      case 'rockscissors':
-      case 'paperrock':
-      case 'scissorspaper':
+      case 'RockScissors':
+      case 'PaperRock':
+      case 'ScissorsPaper':
         userWinRound(userPick, aiPick);
         break;
-      case 'rockrock':
-      case 'paperpaper':
-      case 'scissorsscissors':
+      case 'RockRock':
+      case 'PaperPaper':
+      case 'ScissorsScissors':
         drawRound(userPick, aiPick);
         break;
     }

@@ -5,20 +5,29 @@
   </head>
   <body>
     <h1> <span id='result'></span></h1>
-    <button id='rockButton' class='actionButton' type='button'>Rock</button>
-    <button id='paperButton' class='actionButton' type='button'>Paper</button>
-    <button id='scissorsButton' class='actionButton' type='button'>Scissors</button>
-    <p>Your Score = <span id='userScore'></span></p></br>
-    <p>Computer Score = <span id='aiScore'></span></p>
-    <div id='myModal' class='modal'>
-
-  <!-- Modal content -->
-    <div class='modalContent'>
-        <p id='finalRoundResult'></p>
-      <div class='modalfooter'>
-        <button id='closeButton' type='button'>New Game</button>
+    <div id='scoreBox'>
+      <div id='userScoreBox'>
+        <p>Your Score</p>
+        <span id='userScore'></span>
       </div>
+      <div id='aiScoreBox'>
+        <p>Computer Score</p>
+        <span id='aiScore'></span>
+      </div>
+    </div>
+    <div id='buttonBox'>
+      <button id='rockButton' class='actionButton' type='button'>Rock</button>
+      <button id='paperButton' class='actionButton' type='button'>Paper</button>
+      <button id='scissorsButton' class='actionButton' type='button'>Scissors</button>
+    </div>
 
+    <div id='myModal' class='modal'>
+      <div class='modalContent'>
+        <p id='finalRoundResult'></p>
+        <div class='modalfooter'>
+          <button id='closeButton' type='button'>New Game</button>
+        </div>
+      </div>
     </div>
   </body>
 <script type='text/javascript' src='script.js'></script>
