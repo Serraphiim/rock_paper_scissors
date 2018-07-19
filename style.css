@@ -7,6 +7,21 @@ html, body {
   box-sizing: inherit;
 }
 
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+body {
+  background: url(./images/backgroundMTN.jpeg) no-repeat;
+  background-size: cover;
+}
+
+#result {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 #scoreBox {
   width: 30%;
   padding: 2%;
@@ -38,19 +53,23 @@ html, body {
 
 #buttonBox {
   border: 1px solid black;
-  width: 30%;
+  width: 50%;
+  height: 30%;
   text-align: center;
   position: absolute;
-  top: 75%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .actionButton {
-  background-color: black;
-  color: white;
-  padding: 5%;
-  margin: 5%;
+  padding: 2%;
+  margin: 2%;
+}
+
+.buttonImages {
+  height: 100px;
+  width: 100px;
 }
 /* The Modal */
 .modal {
