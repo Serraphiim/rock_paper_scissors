@@ -4,7 +4,9 @@
     <link href='./style.css' type='text/css' rel='stylesheet'>
   </head>
   <body>
-    <h1> <span id='result'></span></h1>
+    <div id='header'>
+      <h1> <span id='result'></span></h1>
+    </div>
     <div id='scoreBox'>
       <div id='userScoreBox'>
         <p>Your Score</p>
@@ -14,16 +16,16 @@
         <p>Computer Score</p>
         <span id='aiScore'></span>
       </div>
+      <div id='buttonBox'>
+        <button id='rockButton' class='actionButton' type='button'><img class="buttonImages" src="images/rockButton.jpeg" alt="Press to select rock."></button>
+        <button id='paperButton' class='actionButton' type='button'><img class="buttonImages" src="images/paperButton.jpeg" alt="Press to select paper."></button>
+        <button id='scissorsButton' class='actionButton' type='button'><img class="buttonImages" src="images/scissorsButton.png" alt="Press to select scissors."></button>
+      </div>
     </div>
-    <div id='buttonBox'>
-      <button id='rockButton' class='actionButton' type='button'><img class="buttonImages" src="images/rockButton.jpeg" alt="Press to select rock."></button>
-      <button id='paperButton' class='actionButton' type='button'><img class="buttonImages" src="images/paperButton.jpeg" alt="Press to select paper."></button>
-      <button id='scissorsButton' class='actionButton' type='button'><img class="buttonImages" src="images/scissorsButton.png" alt="Press to select scissors."></button>
-    </div>
-
     <div id='myModal' class='modal'>
       <div class='modalContent'>
-        <p id='finalRoundResult'></p>
+        <p class='thanks'> Thank you for playing!</p>
+        <p id='finalRoundResult' class='thanks'></p>
         <div class='modalfooter'>
           <button id='closeButton' type='button'>New Game</button>
         </div>

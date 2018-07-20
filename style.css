@@ -12,30 +12,46 @@ img {
 }
 
 body {
-  background: url(./images/backgroundMTN.jpeg) no-repeat;
+  background: url(./images/backgroundMTN.jpg) no-repeat;
   background-size: cover;
+  color: rgb(73, 56, 41);
+}
+
+#header {
+
+}
+
+h1 {
 }
 
 #result {
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
 #scoreBox {
-  width: 30%;
+  width: 50%;
+  height: 70%;
   padding: 2%;
-  border: 1px solid red;
+  border: 3px solid #4e6172;
+  border-radius: 4px;
   display: inline-block;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(131, 146, 159, .5);
 }
 
 #userScoreBox {
+  font-size: large;
   text-align: center;
   float: left;
+  margin-left: 15%;
 }
 
 #userScore {
@@ -43,8 +59,10 @@ body {
 }
 
 #aiScoreBox {
+  font-size: large;
   text-align: center;
   float: right;
+  margin-right: 15%;
 }
 
 #aiScore {
@@ -52,8 +70,7 @@ body {
 }
 
 #buttonBox {
-  border: 1px solid black;
-  width: 50%;
+  width: 100%;
   height: 30%;
   text-align: center;
   position: absolute;
@@ -63,13 +80,15 @@ body {
 }
 
 .actionButton {
-  padding: 2%;
-  margin: 2%;
+  border-radius: 50%;
+  margin: 3%;
+  border: 5px solid rgb(73, 56, 41);
 }
 
 .buttonImages {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
 /* The Modal */
 .modal {
@@ -81,17 +100,17 @@ body {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: #303030; /* Fallback color */
+    background-color: rgb(102, 141, 60); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     border-radius: 4px;
 }
 
 /* Modal Content/Box */
 .modalContent {
-    background-color: #303030;
+    background-color: rgba(102, 141, 60, .8);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 0px;
-    border: 4px solid #F08080;
+    border: 3px solid rgb(73, 56, 41);
     border-radius: 4px;
     width: 80%; /* Could be more or less, depending on screen size */
     font-size: xx-large;
@@ -100,27 +119,26 @@ body {
 .modalfooter {
   width: 100%;
   height: 100%;
-  background-color: #303030;
 }
 
-#finalRoundResult {
+.thanks {
   text-align: center;
-  color: #fefefe;
-  background-color: #303030;
+  color: rgb(73, 56, 41);
+  width: 100%;
 }
 
 #closeButton {
   width: 100%;
-  background-color: #303030;
-  color: #fefefe;
+  background-color: rgba(102, 141, 60, .8);
+  color: rgb(73, 56, 41);
   font-size: large;
-  border: 1px solid #303030;
   border-radius: 4px;
+  border: 3px solid #4e6172;
 }
 
 #closeButton:hover {
-  background-color: #00FA9A;
-  color: black;
+  background-color: #4e6172;
+  color: #fefefe;
 }
 /* The Close Button */
 
