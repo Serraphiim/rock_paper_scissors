@@ -14,7 +14,7 @@ function round() {
   rockButton.addEventListener('click', () => getRoundResult('Rock'));
   paperButton.addEventListener('click', () => getRoundResult('Paper'));
   scissorsButton.addEventListener('click', () => getRoundResult('Scissors'));
-  document.getElementById('closeButton').addEventListener('click', () => resetClose(aiScore, userScore));
+  closeButton.addEventListener('click', () => resetClose(aiScore, userScore));
 }
 
 round();
@@ -57,13 +57,9 @@ function getRoundResult(userPick) {
 }
 
 function userLoseRound(userPick, aiPick) {
-  if (aiScore <  4) {
-    aiScore++;
-  } else if (aiScore = 4) {
-    aiScore++;
+  aiScore++;
+  if (aiScore >=  5) {
     openModal();
-  } else {
-    aiScore = 'ERROR';
   }
   result = aiPick + ' beats ' + userPick+ ', you lose!';
   document.getElementById('result').innerHTML = result;
@@ -74,13 +70,9 @@ function userLoseRound(userPick, aiPick) {
 
 
 function userWinRound(userPick, aiPick) {
-  if (userScore < 4) {
-    userScore++;
-  } else if (userScore = 4) {
-    userScore++;
+  userScore++;
+  if (userScore >= 5) {
     openModal();
-  } else {
-    userScore = 'ERROR';
   }
   result = userPick + ' beats ' + aiPick+ ', you win!';
   document.getElementById('result').innerHTML  = result;
@@ -105,8 +97,10 @@ function openModal() {
 function resetClose() {
   aiScore = 0;
   userScore = 0;
+  result = 'Play Again!';
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
+  document.getElementById('result').innerHTML = result;
   modal.style.display = 'none';
 }
 
@@ -115,8 +109,10 @@ window.onclick = function(event) {
   if (event.target == modal) {
       aiScore = 0;
       userScore = 0;
+      result = 'Play Again!';
       document.getElementById('userScore').innerHTML = userScore;
       document.getElementById('aiScore').innerHTML = aiScore;
+      document.getElementById('result').innerHTML = result;
       modal.style.display = 'none';
   }
 }
