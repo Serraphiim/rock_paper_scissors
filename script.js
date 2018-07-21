@@ -3,9 +3,13 @@ let aiScore = 0;
 let span = document.getElementById('closeButton')[0];
 let modal = document.getElementById('myModal');
 let result = 'Select a button to begin.';
+let userHand = 'insert picture';
+let aiHand = 'insert picture';
 document.getElementById('userScore').innerHTML = userScore;
 document.getElementById('aiScore').innerHTML = aiScore;
 document.getElementById('result').innerHTML = result;
+document.getElementById('userHand').innerHTML = userHand;
+document.getElementById('aiHand').innerHTML = aiHand;
 //the round function is using an arrow function () => I am not entirely sure what it does I should research
 
 // use a modal box to pop-up when the player reaches 5 points then the button on the modal box will reset the scores to 0

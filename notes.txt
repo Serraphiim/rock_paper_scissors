@@ -1,0 +1,7 @@
+next steps
+add a couple pictures picture to show what each side chose
+add an array that stores the results of each roudn and display them
+
+
+styling fixes
+need to add max width and heights

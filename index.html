@@ -7,20 +7,24 @@
     <div id='header'>
       <h1> <span id='result'></span></h1>
     </div>
-    <div id='scoreBox'>
-      <div id='userScoreBox'>
-        <p>Your Score</p>
-        <span id='userScore'></span>
+    <div id='playBox'>
+      <span id='userHand'></span>
+      <div id='scoreBox'>
+        <div id='userScoreBox'>
+          <p>Your Score</p>
+          <span id='userScore'></span>
+        </div>
+        <div id='aiScoreBox'>
+          <p>Computer Score</p>
+          <span id='aiScore'></span>
+        </div>
+        <div id='buttonBox'>
+          <button id='rockButton' class='actionButton' type='button'><img class="buttonImages" src="images/rockButton.jpeg" alt="Press to select rock."></button>
+          <button id='paperButton' class='actionButton' type='button'><img class="buttonImages" src="images/paperButton.jpeg" alt="Press to select paper."></button>
+          <button id='scissorsButton' class='actionButton' type='button'><img class="buttonImages" src="images/scissorsButton.png" alt="Press to select scissors."></button>
+        </div>
       </div>
-      <div id='aiScoreBox'>
-        <p>Computer Score</p>
-        <span id='aiScore'></span>
-      </div>
-      <div id='buttonBox'>
-        <button id='rockButton' class='actionButton' type='button'><img class="buttonImages" src="images/rockButton.jpeg" alt="Press to select rock."></button>
-        <button id='paperButton' class='actionButton' type='button'><img class="buttonImages" src="images/paperButton.jpeg" alt="Press to select paper."></button>
-        <button id='scissorsButton' class='actionButton' type='button'><img class="buttonImages" src="images/scissorsButton.png" alt="Press to select scissors."></button>
-      </div>
+      <span id='aiHand'></span>
     </div>
     <div id='myModal' class='modal'>
       <div class='modalContent'>

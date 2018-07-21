@@ -33,6 +33,20 @@ h1 {
   transform: translateX(-50%);
 }
 
+#playBox {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+}
+
+#userHand {
+
+}
+
+#aiHand {
+  
+}
+
 #scoreBox {
   width: 50%;
   height: 70%;
