@@ -5,3 +5,5 @@ add an array that stores the results of each roudn and display them
 
 styling fixes
 need to add max width and heights
+
+add rock paper sissors delay to the code on each role

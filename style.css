@@ -34,22 +34,30 @@ h1 {
 }
 
 #playBox {
-  width: 100%;
+  min-width: 1000px;
   height: 100%;
-  border: 1px solid red;
+
 }
 
 #userHand {
-
+  position: absolute;
+  top: 10%;
+  left: -8%;
 }
 
 #aiHand {
-  
+  position: absolute;
+  top: 25%;
+  right: 1%;
+  height: 300px;
+  width: 285px;
 }
 
 #scoreBox {
-  width: 50%;
-  height: 70%;
+  min-width: 650px;
+  max-width: 800px;
+  min-height: 425px;
+  max-height: 475px;
   padding: 2%;
   border: 3px solid #4e6172;
   border-radius: 4px;
@@ -100,8 +108,8 @@ h1 {
 }
 
 .buttonImages {
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
 }
 /* The Modal */
