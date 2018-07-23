@@ -108,7 +108,9 @@ h1 {
   margin: 3%;
   border: 5px solid rgb(73, 56, 41);
 }
-
+.actionButton:hover {
+  transform: scale(1.2);
+}
 .buttonImages {
   height: 100px;
   width: 100px;
