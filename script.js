@@ -3,13 +3,9 @@ let aiScore = 0;
 let span = document.getElementById('closeButton')[0];
 let modal = document.getElementById('myModal');
 let result = 'Select a button to begin.';
-let userHand = 'insert picture';
-let aiHand = 'insert picture';
 document.getElementById('userScore').innerHTML = userScore;
 document.getElementById('aiScore').innerHTML = aiScore;
 document.getElementById('result').innerHTML = result;
-document.getElementById('userHand').innerHTML = userHand;
-document.getElementById('aiHand').innerHTML = aiHand;
 //the round function is using an arrow function () => I am not entirely sure what it does I should research
 
 // use a modal box to pop-up when the player reaches 5 points then the button on the modal box will reset the scores to 0
@@ -65,6 +61,20 @@ function userLoseRound(userPick, aiPick) {
   if (aiScore >=  3) {
     openModal();
   }
+  switch (userPick) {
+    case 'Rock':
+      document.getElementById('userHand').src= './images/rockButton.png';
+      document.getElementById('aiHand').src= './images/paperButton.png';
+      break;
+    case 'Paper':
+      document.getElementById('userHand').src= './images/paperButton.png';
+      document.getElementById('aiHand').src= './images/scissorsButton.png';
+      break;
+    case 'Scissors':
+      document.getElementById('userHand').src= './images/scissorsButton.png';
+      document.getElementById('aiHand').src= './images/rockButton.png';
+      break;
+  }
   result = aiPick + ' beats ' + userPick+ ', you lose!';
   document.getElementById('result').innerHTML = result;
   document.getElementById('userScore').innerHTML = userScore;
@@ -78,6 +88,20 @@ function userWinRound(userPick, aiPick) {
   if (userScore >= 3) {
     openModal();
   }
+  switch (aiPick) {
+    case 'Rock':
+      document.getElementById('userHand').src= './images/paperButton.png';
+      document.getElementById('aiHand').src= './images/rockButton.png';
+      break;
+    case 'Paper':
+      document.getElementById('userHand').src= './images/scissorsButton.png';
+      document.getElementById('aiHand').src= './images/paperButton.png';
+      break;
+    case 'Scissors':
+      document.getElementById('userHand').src= './images/rockButton.png';
+      document.getElementById('aiHand').src= './images/scissorsButton.png';
+      break;
+  }
   result = userPick + ' beats ' + aiPick+ ', you win!';
   document.getElementById('result').innerHTML  = result;
   document.getElementById('userScore').innerHTML = userScore;
@@ -86,6 +110,20 @@ function userWinRound(userPick, aiPick) {
 }
 
 function drawRound(userPick, aiPick) {
+  switch (userPick) {
+    case 'Rock':
+      document.getElementById('userHand').src= './images/rockButton.png';
+      document.getElementById('aiHand').src= './images/rockButton.png';
+      break;
+    case 'Paper':
+      document.getElementById('userHand').src= './images/paperButton.png';
+      document.getElementById('aiHand').src= './images/paperButton.png';
+      break;
+    case 'Scissors':
+      document.getElementById('userHand').src= './images/scissorsButton.png';
+      document.getElementById('aiHand').src= './images/scissorsButton.png';
+      break;
+  }
   result = ' Both players chose ' + userPick+ ', it is a draw!';
   document.getElementById('result').innerHTML = result;
   document.getElementById('userScore').innerHTML = userScore;
@@ -102,6 +140,8 @@ function resetClose() {
   aiScore = 0;
   userScore = 0;
   result = 'Play Again!';
+  document.getElementById('userHand').src= './images/bearPicture.png';
+  document.getElementById('aiHand').src= './images/aiPicture.png';
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
   document.getElementById('result').innerHTML = result;
@@ -114,6 +154,8 @@ window.onclick = function(event) {
       aiScore = 0;
       userScore = 0;
       result = 'Play Again!';
+      document.getElementById('userHand').src= './images/bearPicture.png';
+      document.getElementById('aiHand').src= './images/aiPicture.png';
       document.getElementById('userScore').innerHTML = userScore;
       document.getElementById('aiScore').innerHTML = aiScore;
       document.getElementById('result').innerHTML = result;
