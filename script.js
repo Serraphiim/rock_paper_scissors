@@ -62,7 +62,7 @@ function getRoundResult(userPick) {
 
 function userLoseRound(userPick, aiPick) {
   aiScore++;
-  if (aiScore >=  5) {
+  if (aiScore >=  3) {
     openModal();
   }
   result = aiPick + ' beats ' + userPick+ ', you lose!';
@@ -75,7 +75,7 @@ function userLoseRound(userPick, aiPick) {
 
 function userWinRound(userPick, aiPick) {
   userScore++;
-  if (userScore >= 5) {
+  if (userScore >= 3) {
     openModal();
   }
   result = userPick + ' beats ' + aiPick+ ', you win!';
