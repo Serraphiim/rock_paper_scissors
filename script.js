@@ -2,7 +2,9 @@ let userScore = 0;
 let aiScore = 0;
 let span = document.getElementById('closeButton')[0];
 let modal = document.getElementById('myModal');
-let result = 'Select a button to begin.';
+let result = 'The Game is Rock, Paper, Scissors.';
+let userHand = document.getElementById('userHand');
+let aiHand = document.getElementById('aiHand');
 document.getElementById('userScore').innerHTML = userScore;
 document.getElementById('aiScore').innerHTML = aiScore;
 document.getElementById('result').innerHTML = result;
@@ -63,18 +65,19 @@ function userLoseRound(userPick, aiPick) {
   }
   switch (userPick) {
     case 'Rock':
-      document.getElementById('userHand').src= './images/rockButton.png';
-      document.getElementById('aiHand').src= './images/paperButton.png';
+      userHand.src = './images/rockButton.png';
+      aiHand.src = './images/paperButton.png';
       break;
     case 'Paper':
-      document.getElementById('userHand').src= './images/paperButton.png';
-      document.getElementById('aiHand').src= './images/scissorsButton.png';
+      userHand.src= './images/paperButton.png';
+      aiHand.src= './images/scissorsButton.png';
       break;
     case 'Scissors':
-      document.getElementById('userHand').src= './images/scissorsButton.png';
-      document.getElementById('aiHand').src= './images/rockButton.png';
+      userHand.src= './images/scissorsButton.png';
+      aiHand.src= './images/rockButton.png';
       break;
   }
+  playerChoiceStyling();
   result = aiPick + ' beats ' + userPick+ ', you lose!';
   document.getElementById('result').innerHTML = result;
   document.getElementById('userScore').innerHTML = userScore;
@@ -90,18 +93,19 @@ function userWinRound(userPick, aiPick) {
   }
   switch (aiPick) {
     case 'Rock':
-      document.getElementById('userHand').src= './images/paperButton.png';
-      document.getElementById('aiHand').src= './images/rockButton.png';
+      userHand.src= './images/paperButton.png';
+      aiHand.src= './images/rockButton.png';
       break;
     case 'Paper':
-      document.getElementById('userHand').src= './images/scissorsButton.png';
-      document.getElementById('aiHand').src= './images/paperButton.png';
+      userHand.src= './images/scissorsButton.png';
+      aiHand.src= './images/paperButton.png';
       break;
     case 'Scissors':
-      document.getElementById('userHand').src= './images/rockButton.png';
-      document.getElementById('aiHand').src= './images/scissorsButton.png';
+      userHand.src= './images/rockButton.png';
+      aiHand.src= './images/scissorsButton.png';
       break;
   }
+  playerChoiceStyling();
   result = userPick + ' beats ' + aiPick+ ', you win!';
   document.getElementById('result').innerHTML  = result;
   document.getElementById('userScore').innerHTML = userScore;
@@ -112,18 +116,19 @@ function userWinRound(userPick, aiPick) {
 function drawRound(userPick, aiPick) {
   switch (userPick) {
     case 'Rock':
-      document.getElementById('userHand').src= './images/rockButton.png';
-      document.getElementById('aiHand').src= './images/rockButton.png';
+      userHand.src= './images/rockButton.png';
+      aiHand.src= './images/rockButton.png';
       break;
     case 'Paper':
-      document.getElementById('userHand').src= './images/paperButton.png';
-      document.getElementById('aiHand').src= './images/paperButton.png';
+      userHand.src= './images/paperButton.png';
+      aiHand.src= './images/paperButton.png';
       break;
     case 'Scissors':
-      document.getElementById('userHand').src= './images/scissorsButton.png';
-      document.getElementById('aiHand').src= './images/scissorsButton.png';
+      userHand.src= './images/scissorsButton.png';
+      aiHand.src= './images/scissorsButton.png';
       break;
   }
+  playerChoiceStyling();
   result = ' Both players chose ' + userPick+ ', it is a draw!';
   document.getElementById('result').innerHTML = result;
   document.getElementById('userScore').innerHTML = userScore;
@@ -140,8 +145,9 @@ function resetClose() {
   aiScore = 0;
   userScore = 0;
   result = 'Play Again!';
-  document.getElementById('userHand').src= './images/bearPicture.png';
-  document.getElementById('aiHand').src= './images/aiPicture.png';
+  userHand.src= './images/bearPicture.png';
+  aiHand.src= './images/aiPicture.png';
+  resetPlayerPicture();
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('aiScore').innerHTML = aiScore;
   document.getElementById('result').innerHTML = result;
@@ -154,11 +160,46 @@ window.onclick = function(event) {
       aiScore = 0;
       userScore = 0;
       result = 'Play Again!';
-      document.getElementById('userHand').src= './images/bearPicture.png';
-      document.getElementById('aiHand').src= './images/aiPicture.png';
+      userHand.src= './images/bearPicture.png';
+      aiHand.src= './images/aiPicture.png';
+      resetPlayerPicture();
       document.getElementById('userScore').innerHTML = userScore;
       document.getElementById('aiScore').innerHTML = aiScore;
       document.getElementById('result').innerHTML = result;
       modal.style.display = 'none';
   }
+}
+
+function resetPlayerPicture() {
+  userHand.style.width = '400px';
+  userHand.style.height = '400px';
+  userHand.style.position = 'absolute'
+  userHand.style.top = '18%';
+  userHand.style.left = '-2%';
+  aiHand.style.width = '285px';
+  aiHand.style.height = '300px';
+  aiHand.style.position = 'absolute'
+  aiHand.style.top = '25%';
+  aiHand.style.right = '1%';
+}
+
+function playerChoiceStyling() {
+  userHandStyling();
+  aiHandStyling();
+}
+
+function userHandStyling() {
+  userHand.style.width = '250px';
+  userHand.style.height = '250px';
+  userHand.style.position = 'absolute'
+  userHand.style.top = '30%';
+  userHand.style.left = '3%';
+}
+
+function aiHandStyling() {
+  aiHand.style.width = '250px';
+  aiHand.style.height = '250px';
+  aiHand.style.position = 'absolute'
+  aiHand.style.top = '30%';
+  aiHand.style.right = '3%';
 }

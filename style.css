@@ -104,7 +104,7 @@ h1 {
 }
 
 .actionButton {
-  border-radius: 50%;
+  border-radius: 25%;
   margin: 3%;
   border: 5px solid rgb(73, 56, 41);
 }
@@ -112,7 +112,7 @@ h1 {
 .buttonImages {
   height: 100px;
   width: 100px;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 /* The Modal */
 .modal {
