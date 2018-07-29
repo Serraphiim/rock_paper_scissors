@@ -7,24 +7,11 @@ html, body {
   box-sizing: inherit;
 }
 
-img {
-    image-rendering: -webkit-optimize-contrast;
-}
-
 body {
   background: url(./images/backgroundMTN.jpg) no-repeat;
   background-size: cover;
-  min-width: 1000px;
-  max-width: 100%;
-  min-height: 100%;
+  background-color: #4e6172;
   color: rgb(73, 56, 41);
-}
-
-#header {
-
-}
-
-h1 {
 }
 
 #result {
@@ -44,27 +31,26 @@ h1 {
 
 #userHand {
   position: absolute;
-  top: 18%;
-  left: -2%;
+  top: 20%;
   height: 400px;
   width: 400px;
   z-index: 1;
 }
 
-#userHand:hover {
-  transform: scale(1.2);
-}
-
 #aiHand {
   position: absolute;
   top: 25%;
-  right: 1%;
+  right: 2%;
   height: 300px;
   width: 285px;
   z-index: 1;
 }
 
 #aiHand:hover {
+  transform: scale(1.2);
+}
+
+#userHand:hover {
   transform: scale(1.2);
 }
 
@@ -92,7 +78,7 @@ h1 {
   margin-left: 15%;
 }
 
-#userScore {
+#userScore, #aiScore {
   font-size: 200px;
 }
 
@@ -101,10 +87,6 @@ h1 {
   text-align: center;
   float: right;
   margin-right: 15%;
-}
-
-#aiScore {
-  font-size: 200px;
 }
 
 #buttonBox {

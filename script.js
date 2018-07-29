@@ -174,13 +174,12 @@ function resetPlayerPicture() {
   userHand.style.width = '400px';
   userHand.style.height = '400px';
   userHand.style.position = 'absolute'
-  userHand.style.top = '18%';
-  userHand.style.left = '-2%';
+  userHand.style.top = '20%';
   aiHand.style.width = '285px';
   aiHand.style.height = '300px';
   aiHand.style.position = 'absolute'
   aiHand.style.top = '25%';
-  aiHand.style.right = '1%';
+  aiHand.style.right = '2%';
 }
 
 function playerChoiceStyling() {
