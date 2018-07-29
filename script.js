@@ -175,6 +175,7 @@ function resetPlayerPicture() {
   userHand.style.height = '400px';
   userHand.style.position = 'absolute'
   userHand.style.top = '20%';
+  userHand.style.left = '-1%';
   aiHand.style.width = '285px';
   aiHand.style.height = '300px';
   aiHand.style.position = 'absolute'
