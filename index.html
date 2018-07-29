@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href='./style.css' type='text/css' rel='stylesheet'>
-  </head>
-  <body>
-    <div id='header'>
-      <h1> <span id='result'></span></h1>
-    </div>
-    <div id='playBox'>
-      <img src='./images/bearPicture.png' id='userHand'>
-      <div id='scoreBox'>
-        <div id='userScoreBox'>
-          <p>Your Score</p>
-          <span id='userScore'></span>
-        </div>
-        <div id='aiScoreBox'>
-          <p>Computer Score</p>
-          <span id='aiScore'></span>
-        </div>
-        <div id='buttonBox'>
-          <button id='rockButton' class='actionButton' type='button'><img class="buttonImages" src="images/rockButton.png" alt="Press to select rock."></button>
-          <button id='paperButton' class='actionButton' type='button'><img class="buttonImages" src="images/paperButton.png" alt="Press to select paper."></button>
-          <button id='scissorsButton' class='actionButton' type='button'><img class="buttonImages" src="images/scissorsButton.png" alt="Press to select scissors."></button>
-        </div>
+<head>
+  <link href='./style.css' type='text/css' rel='stylesheet'>
+</head>
+<body>
+  <div id='header'>
+    <span id='result'></span>
+  </div>
+  <div id='playBox'>
+    <img src='./images/bearPicture.png' id='userHand'>
+    <div id='scoreBox'>
+      <div id='userScoreBox'>
+        <p>Your Score</p>
+        <span id='userScore'></span>
       </div>
-      <img src='./images/aiPicture.png' id='aiHand'>
-    </div>
-    <div id='myModal' class='modal'>
-      <div class='modalContent'>
-        <p class='thanks'> Thank you for playing!</p>
-        <p id='finalRoundResult' class='thanks'></p>
-        <div class='modalfooter'>
-          <button id='closeButton' type='button'>New Game</button>
-        </div>
+      <div id='aiScoreBox'>
+        <p>Computer Score</p>
+        <span id='aiScore'></span>
+      </div>
+      <div id='buttonBox'>
+        <button id='rockButton' class='actionButton' type='button'><img class="buttonImages" src="images/rockButton.png" alt="Press to select rock."></button>
+        <button id='paperButton' class='actionButton' type='button'><img class="buttonImages" src="images/paperButton.png" alt="Press to select paper."></button>
+        <button id='scissorsButton' class='actionButton' type='button'><img class="buttonImages" src="images/scissorsButton.png" alt="Press to select scissors."></button>
       </div>
     </div>
-  </body>
+    <img src='./images/aiPicture.png' id='aiHand'>
+  </div>
+  <div id='myModal' class='modal'>
+    <div class='modalContent'>
+      <p class='thanks'> Thank you for playing!</p>
+      <p id='finalRoundResult' class='thanks'></p>
+      <div class='modalfooter'>
+        <button id='closeButton' type='button'>New Game</button>
+      </div>
+    </div>
+  </div>
+</body>
 <script type='text/javascript' src='script.js'></script>
 </html>
