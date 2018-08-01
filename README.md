@@ -3,7 +3,7 @@ This is a simple implementation of rock, paper scissors. I built this project wh
 The first one to 3 points wins!
 
 <strong>Motivation</strong></br>
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+I wanted to learn some more about JS!
 
 <strong>Build status</strong></br>
 The build is complete for this implementation.
