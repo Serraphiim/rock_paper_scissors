@@ -12,9 +12,6 @@ The build is complete for this implementation.
 In the future I would like to make the game more responsive to different screen sizes and potentially add @media queries. 
 I will also be updating the box modal to include the players scores in the end to make it more clear whether or not you won.
 
-<strong>Installation</strong></br>
-Provide step by step series of examples and explanations about how to get a development env running.
-
 <strong>How to play?</strong></br>
 Follow this link: https://gschnurr.github.io/rock_paper_scissors/
 
