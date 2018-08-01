@@ -16,7 +16,7 @@ I will also be updating the box modal to include the players scores in the end t
 Provide step by step series of examples and explanations about how to get a development env running.
 
 <strong>How to play?</strong></br>
-Follow this link: https://serraphiim.github.io/rock_paper_scissors/
+Follow this link: https://gschnurr.github.io/rock_paper_scissors/
 
 
 MIT © Gibson Schnurr
